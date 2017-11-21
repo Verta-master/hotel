@@ -1,0 +1,50 @@
+.discount {
+  color: #fff;
+  background-image: url(../img/img-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.51);
+    z-index: 0;
+  }
+}
+
+.discount__wrap {
+  min-height: 234px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.discount__title {
+  color: #fff;
+  padding-left: 70px;
+  padding-right: 150px;
+  position: relative;
+  
+  span {
+    color: @yellow;
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 58px;
+    background-image: url(../img/icon-building.svg);
+    background-repeat: no-repeat;
+  }
+}
