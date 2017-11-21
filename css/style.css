@@ -615,6 +615,13 @@ h3 {
 .social__item {
   margin-left: 17px;
 }
+.title-h2 {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
 /**
  * Swiper 3.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1289,4 +1296,124 @@ button.swiper-pagination-bullet {
 .booking__btn:active {
   background-color: transparent;
   transition: ease-out 0.3s;
+}
+.about__subtitle {
+  text-align: center;
+}
+.about__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.about__text span {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #c69d5e;
+  text-transform: uppercase;
+}
+.about__block {
+  width: 50%;
+}
+.benefits {
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+.benefits__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+.benefits__icon {
+  width: 35px;
+  height: auto;
+}
+.benefits__title {
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+}
+.benefits__item {
+  width: 30%;
+  padding-left: 50px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  position: relative;
+}
+.benefits__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 100%;
+  border: 1px solid #dfdfdf;
+  z-index: -1;
+}
+.benefits__link:hover,
+.benefits__link:active {
+  fill: #c69d5e;
+}
+.benefits__link:hover .benefits__title,
+.benefits__link:active .benefits__title {
+  color: #c69d5e;
+}
+.benefits__block {
+  background-color: #fff;
+}
+.discount {
+  color: #fff;
+  background-image: url(../img/img-3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.discount::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.51);
+  z-index: 0;
+}
+.discount__wrap {
+  min-height: 234px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.discount__title {
+  color: #fff;
+  padding-left: 70px;
+  padding-right: 150px;
+  position: relative;
+}
+.discount__title span {
+  color: #c69d5e;
+}
+.discount__title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 58px;
+  background-image: url(../img/icon-building.svg);
+  background-repeat: no-repeat;
 }
