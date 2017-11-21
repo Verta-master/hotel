@@ -1,0 +1,45 @@
+body {
+  font-family: "Circe", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: @text;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+figure {
+  .reset();
+}
+
+ul {
+  .reset();
+  list-style-type: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Georgia", "Arial", sans-serif;
+  color: @title;
+}
