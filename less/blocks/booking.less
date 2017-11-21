@@ -1,0 +1,118 @@
+.booking {
+  background-color: @yellow;
+  width: 100%;
+  padding: 30px 55px 40px 37px;
+  
+  input,
+  select {
+    border: 1px solid #fff;
+    background-color: transparent;
+    height: 52px;
+    outline: none;
+    font-size: 18px;
+    font-weight: normal;
+  }
+  
+  input::placeholder {
+    opacity: 1;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+.booking-form {
+  margin-top: -80px;
+  position: relative;
+  z-index: 25;
+}
+
+.booking__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking__date {
+  width: 265px;
+  padding: 0 50px;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.booking__date-wrap {
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 18px;
+    height: 19px;
+    background-image: url(../img/icon-calender.png);
+    background-repeat: no-repeat;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    width: 11px;
+    height: 7px;
+    background-image: url(../img/icon-arrow-down.png);
+    background-repeat: no-repeat;
+  }
+}
+
+.booking__select {
+  width: 241px;
+  margin-bottom: 20px;
+  padding: 0 30px;
+  color: #fff;
+  cursor: pointer;
+  appearance: none;
+  background-image: url(../img/icon-arrow-down.png);
+  background-position: 92% 20px;
+  background-repeat: no-repeat;
+
+  option[disabled] {
+    display: none;
+  }
+  
+  option {
+    color: @text;
+  }
+}
+
+.booking__select::-ms-expand {
+  color: transparent;
+  border: none;
+  background-color: transparent;
+}
+
+.booking__text {
+  width: 398px;
+  padding: 0 30px;
+  color: #fff;
+  font-size: 18px;
+}
+
+.booking__btn {
+  width: 241px;
+  height: 52px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #1e1e1e;
+  background-color: #fff;
+  border: 1px solid #fff;
+  transition: ease-out 0.3s;
+  
+  &:hover,
+  &:active {
+    background-color: transparent;
+    transition: ease-out 0.3s;
+  }
+}
