@@ -11,7 +11,7 @@
   <header class="header wrapper">
     <div class="header__top">
       <address class="address">
-        <p class="address__text address__text--place"><span>г. Славянск-на-Кубани, ул. Красная, 10</span></p>
+        <p class="address__text address__text--place"><span>г. Славянск-на-Кубани, ул.&nbsp;Красная, 10</span></p>
         <a class="address__text address__text--phone" href="Tel:+78614640329">8(86146) 4-03-29</a>
       </address>
       <div class="logo">
@@ -26,7 +26,8 @@
       </div>
     </div>
     <div class="header__bottom">
-      <nav class="menu">
+      <nav class="menu menu--closed">
+        <button type="button" class="menu__btn"></button>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="#" class="menu__link menu__link--active">Главная</a>
@@ -51,7 +52,7 @@
           </li>
         </ul>
       </nav>
-      <button type="button" class="btn">Забронировать номер</button>
+      <button type="button" class="btn popup">Забронировать номер</button>
     </div>
   </header>
   
@@ -75,7 +76,7 @@
       <div class="promo__title">
         <h1 class="promo__h1">Добро пожаловать в гостиницу<span>Славянская</span></h1>
         <p class="promo__comment">Раннее бронирование к Новому году</p>
-        <button type="button" class="promo__btn">Забронировать</button>
+        <button type="button" class="promo__btn popup">Забронировать</button>
       </div>
     </section>
     
@@ -102,8 +103,8 @@
           </select>
         </div>
         <div class="booking__line">
-          <input type="email" class="booking__text" placeholder="E-mail">
-          <input type="text" class="booking__text" placeholder="Дата отбытия">
+          <input type="email" name="email" class="booking__text" placeholder="E-mail">
+          <input type="text" name="date" class="booking__text" placeholder="Дата отбытия">
           <button type="submit" name="book" class="booking__btn">Забронировать номер</button>
         </div>
       </form>
@@ -113,13 +114,13 @@
       <h2 class="title-h2 about__title">О нас</h2>
       <p class="about__subtitle">Современная и комфортабельная Гостиница «Славянская» расположена в самом центре Славянска-на-Кубани у центральной городской площади, напротив Дома культуры, в нескольких шагах от Администрации МО и города, городского парка, Инспекции Федеральной налоговой Службы, Полиции. В непосредственной близости находятся важнейшие учреждения, офисы компаний, торговые центры.Год основания гостиницы 1962 года. В 2011 году реконструирована.</p>
       <div class="about__wrap">
+        <figure class="about__figure">
+          <img src="img/img-1.jpg" alt="" width="569" height="379">
+        </figure>
         <div class="about__block">
           <p class="about__text"><span>Гостиница «Славянская» предлагает гостям 38 просторных и элегантных номеров , включая:</span>13 номеров – одноместные стандартные, 14 номеров – двухместные стандартные, 9 номеров – двухместные стандартные улучшенные, 1 номер – двухместный стандарт Де люкс, 1 номер – двухместный двухкомнатный люкс с видами на городскую площадь и ул. Красную. Ресторан Русской и Европейской кухни, 2 банкетных зала, бар, столовая, магазин свежей выпечки и хлеба. Лобби бар гостиницы подходит для деловых и неформальных встреч.</p>
           <p class="about__text">В стоимость номера входит: проживание, завтрак и бесплатная автостоянка для гостей. Бесплатное пользование интернетом (wi-fi) и посещение сауны. Номера укомплектованы : мини баром, сплит системой, TV, сейфом, индивидуальными средствами (шампунь, мыло, зубной набор, бритвенный набор, гель и шляпочки для душа), халатом, тапочками и другими принадлежностями.</p>
         </div>
-        <figure class="about__figure">
-          <img src="img/img-1.jpg" alt="" width="569" height="379">
-        </figure>
       </div>
     </section>
     
@@ -170,7 +171,7 @@
     <section class="discount">
       <div class="discount__wrap wrapper">
         <h2 class="discount__title">Сегодня <span>25% скидка</span> на гостиничный номер или любые другие события...</h2>
-        <button type="button" class="btn discount__btn">Забронируйте сейчас!</button>
+        <button type="button" class="btn discount__btn popup">Забронируйте сейчас!</button>
       </div>
     </section>
     
@@ -183,42 +184,44 @@
           <p class="room__text">Ресторан Русской и Европейской кухни, 2 банкетных зала, бар, столовая, магазин свежей выпечки и хлеба. Лобби бар гостиницы подходит для деловых и не формальных встреч.</p>
           <a href="#" class="room__link"><span>СВЯЖИТЕСЬ С НАМИ</span></a>
         </div>
-        <div class="swiper-container room__slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide room__slide">
-              <figure class="room__img">
-                <img src="img/img-2.jpg" alt="Гостиница «Славянская»" width="670" height="390">
-              </figure>
-              <p class="room__price"><span>3 500</span> &#8381; / сутки</p>
-              <div class="room__about">
-                <h3 class="room__h3">Одноместный номер<span>Первой категории</span></h3>
-                <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
-                <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
-                <button type="button" class="btn room__btn">Забронировать номер</button>
+        <div class="room__slider-wrap">
+          <div class="swiper-container room__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide room__slide">
+                <figure class="room__img">
+                  <img src="img/img-2.jpg" alt="Гостиница «Славянская»" width="670" height="390">
+                </figure>
+                <p class="room__price"><span>3 500</span> &#8381; / сутки</p>
+                <div class="room__about">
+                  <h3 class="room__h3">Одноместный номер<span>Первой категории</span></h3>
+                  <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
+                  <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
+                  <button type="button" class="btn room__btn popup">Забронировать номер</button>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide room__slide">
-              <figure class="room__img">
-                <img src="img/img-4.jpg" alt="Гостиница «Славянская»" width="670" height="431">
-              </figure>
-              <p class="room__price"><span>5 500</span> &#8381; / сутки</p>
-              <div class="room__about">
-                <h3 class="room__h3">Двухместный номер<span>Первой категории</span></h3>
-                <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
-                <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
-                <button type="button" class="btn room__btn">Забронировать номер</button>
+              <div class="swiper-slide room__slide">
+                <figure class="room__img">
+                  <img src="img/img-4.jpg" alt="Гостиница «Славянская»" width="670" height="431">
+                </figure>
+                <p class="room__price"><span>5 500</span> &#8381; / сутки</p>
+                <div class="room__about">
+                  <h3 class="room__h3">Двухместный номер<span>Первой категории</span></h3>
+                  <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
+                  <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
+                  <button type="button" class="btn room__btn popup">Забронировать номер</button>
+                </div>
               </div>
-            </div>
-            <div class="swiper-slide room__slide">
-              <figure class="room__img">
-                <img src="img/img-5.jpg" alt="Гостиница «Славянская»" width="670" height="451">
-              </figure>
-              <p class="room__price"><span>4 500</span> &#8381; / сутки</p>
-              <div class="room__about">
-                <h3 class="room__h3">Одноместный номер<span>Первой категории</span></h3>
-                <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
-                <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
-                <button type="button" class="btn room__btn">Забронировать номер</button>
+              <div class="swiper-slide room__slide">
+                <figure class="room__img">
+                  <img src="img/img-5.jpg" alt="Гостиница «Славянская»" width="670" height="451">
+                </figure>
+                <p class="room__price"><span>4 500</span> &#8381; / сутки</p>
+                <div class="room__about">
+                  <h3 class="room__h3">Одноместный номер<span>Первой категории</span></h3>
+                  <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
+                  <p>Cras ac quam nec ex scelerisque mollis. Sed euismod malesuada nibh, non ornare tellus egestas vel. Pellentesque ac orci vitae magna mollis sagittis. Etiam sagittis rutrum tortor.</p>
+                  <button type="button" class="btn room__btn popup">Забронировать номер</button>
+                </div>
               </div>
             </div>
           </div>
@@ -234,7 +237,7 @@
         <img src="img/logo-vertical.png" alt="Logo" width="255" height="82">
       </div>
       <address class="address">
-        <p class="address__text address__text--place">г. Славянск-на-Кубани, ул. Красная, 10</p>
+        <p class="address__text address__text--place">г. Славянск-на-Кубани, ул.&nbsp;Красная, 10</p>
         <a class="address__text address__text--phone" href="Tel:+78614640329">8(86146) 4-03-29</a>
       </address>
       <ul class="social">
@@ -277,11 +280,55 @@
     </div>
   </footer>
   
+  <div style="display: none;">
+    <div class="modal">
+      <button type="button" class="modal__close arcticmodal-close"></button>
+      <h2 class="modal__title">Бронь номера в нашем отеле</h2>
+      <form action="#" class="booking" method="get">
+        <div class="booking__line">
+          <div class="booking__date-wrap">
+            <input class="booking__date" name="away" type="text" placeholder="Дата прибытия" required>
+          </div>
+          <div class="booking__date-wrap">
+            <input class="booking__date" name="come" type="text" placeholder="Дата отбытия" required>
+          </div>
+          <select name="night" class="booking__select" required>
+            <option value="" disabled selected>Количество ночей</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <select name="guest" class="booking__select" required>
+            <option value="" disabled selected>Количество гостей</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div class="booking__line">
+          <input type="email" name="email" class="booking__text" placeholder="E-mail">
+          <input type="text" name="date" class="booking__text" placeholder="Дата отбытия">
+          <button type="submit" name="book" class="booking__btn">Забронировать номер</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.arcticmodal-0.3.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<!--  <script src="js/script.js"></script>-->
+  <script src="js/script.js"></script>
 
+<!-- Modal windows -->
+  <script>
+    $(".popup").click(function(){
+      $(function(){
+        $(".modal").arcticmodal();
+      });
+    });
+  </script>
+  
 <!-- Sliders -->
   <script>        
     var swiper = new Swiper(".promo__slider", {
@@ -292,6 +339,9 @@
       pagination: ".room__pagination",
       paginationClickable: true,
       effect: 'fade',
+      slidesPerView: 1,
+      preventClicks: false,
+      preventClicksPropagation: false,
     });
   </script>
   

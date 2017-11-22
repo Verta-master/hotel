@@ -1,0 +1,318 @@
+@media (max-width: 1229px) {
+  .wrapper {
+    width: 100%;
+  }
+  
+  .address {
+    max-width: 220px;
+  }
+  
+  .header__top {
+    justify-content: space-between;
+  }
+  
+  .weather ,
+  .logo {
+    margin-left: 0;
+  }
+  
+  .menu__btn {
+    display: block;
+  }
+  
+  .menu {
+    padding-top: 28px;
+    padding-bottom: 32px;
+    position: relative;
+  }
+  
+  .menu--closed {
+    .menu__list {
+      display: none;
+    }
+  }
+  
+  .menu--opened {
+    .menu__btn {
+      background-image: url(../img/icon-menu-cross.svg);
+    }
+    
+    .menu__list {
+      display: flex;
+      flex-wrap: wrap;
+      position: absolute;
+      top: 100%;
+      left: -30px;
+      padding-left: 30px;
+      width: 100vw;
+      z-index: 50;
+      background-color: #fff;
+    }
+  }
+  
+  .booking {
+    padding: 30px;
+  }
+  
+  .booking__btn {
+    width: 23%;
+  }
+  
+  .booking__date-wrap {
+    width: 23%;
+    
+    &::before {
+      left: 5px;
+    }
+  }
+  
+  .booking__date {
+    width: 100%;
+    padding: 0 30px;
+  }
+  
+  .booking__select {
+    width: 23%;
+    padding-left: 15px;
+  }
+  
+  .booking__text {
+    width: 36%;
+  }
+  
+  .modal {
+    width: 100%;
+  }
+  
+  .discount__title {
+    max-width: 650px;
+  }
+  
+  .room__wrap {
+    display: block;
+  }
+  
+  .room__block {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .room__slider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//-------------------------
+@media (max-width: 1023px) {
+  .header__top {
+    flex-wrap: wrap;
+    
+    .address {
+      order: 2;
+    }
+  }
+  
+  .logo {
+    width: 100%;
+    order: 1;
+    text-align: center;
+  }
+  
+  .weather {
+    order: 3;
+  }
+  
+  .footer__wrap,
+  .booking__line {
+    flex-wrap: wrap;
+  }
+  
+  .booking__text,
+  .booking__select,
+  .booking__date-wrap {
+    width: 49%;
+  }
+  
+  .booking__btn {
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  
+  .benefits__item {
+    padding-right: 0;
+  }
+  
+  .discount__title {
+    font-size: 20px;
+  }
+  
+  .footer__logo {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+//-------------------------
+@media (max-width: 767px) {
+  .promo__h1 {
+    span {
+      font-size: 48px;
+    }
+  }
+  
+  .promo__comment {
+    font-size: 18px;
+  }
+  
+  .benefits__list {
+    display: block;
+  }
+  
+  .benefits__item {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .discount__wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .discount__btn {
+    margin-top: 20px;
+  }
+  
+  .modal__title {
+    font-size: 20px;
+  }
+  
+  .benefits {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .room__wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .room__slider {
+    width: 100%;
+  }
+  
+  .room__about {
+    padding: 25px 20px;
+    width: 50%;
+    
+    p {
+      line-height: 1.2;
+    }
+  }
+  
+  .room__h3 {
+    font-size: 14px;
+    
+    span {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+  
+  .room__price {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//-------------------------
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+  
+  .header__top {
+    justify-content: center;
+    
+    .address {
+      margin-bottom: 10px;
+    }
+  }
+  
+  .menu--opened .menu__list {
+    left: -10px;
+  }
+  
+  .promo__h1 {
+    font-size: 14px;
+    
+    span {
+      font-size: 30px;
+    }
+  }
+  
+  .booking {
+    padding: 20px;
+  }
+  
+  .booking__date-wrap,
+  .booking__select,
+  .booking__text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .booking__btn {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .about__title {
+    margin-bottom: 20px;
+  }
+  
+  .about__figure {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  
+  .footer__wrap {
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .social {
+    margin-top: 20px;
+  }
+  
+  .room__img {
+    position: static;
+  }
+  
+  .room__slide {
+    display: block;
+    padding-top: 30px;
+  }
+  
+  .room__price {
+    width: 190px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+  
+  .room__about {
+    width: 100%;
+    min-height: auto;
+  }
+  
+  .modal__title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
