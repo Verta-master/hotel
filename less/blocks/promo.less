@@ -1,5 +1,7 @@
 .promo {
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .promo__title {
@@ -17,6 +19,19 @@
   text-align: center;
   background-color: rgba(0, 0, 0, 0.51);
   z-index: 10;
+  
+  &--internal {
+    padding-top: 0;
+    display: block;
+    
+    .promo__h1 {
+      text-align: left;
+    }
+    
+    .promo__h1::after {
+      display: none;
+    }
+  }
 }
 
 .promo__h1 {
@@ -83,6 +98,10 @@
   display: block;
   height: 653px;
   max-width: none;
+  
+  &--internal {
+    height: 134px;
+  }
 }
 
 .promo__pagination {
