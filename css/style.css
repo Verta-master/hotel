@@ -1551,7 +1551,7 @@ button.swiper-pagination-bullet {
 .room__about {
   width: 370px;
   min-height: 544px;
-  padding: 55px 40px 50px 30px;
+  padding: 55px 40px 50px 40px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1568,13 +1568,20 @@ button.swiper-pagination-bullet {
 }
 .room__about p {
   line-height: 1.6;
+  margin-bottom: 0;
 }
 .room__price {
+  width: 190px;
   margin: 0;
   margin-left: 37px;
-  margin-bottom: 35px;
-  padding: 20px;
+  margin-bottom: 40px;
   min-height: 62px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   position: relative;
   z-index: 1;
   box-sizing: border-box;
@@ -1594,7 +1601,7 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
   position: relative;
   margin-top: 0;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .room__h3 span {
   display: block;
@@ -1962,13 +1969,15 @@ button.swiper-pagination-bullet {
     padding-top: 30px;
   }
   .room__price {
-    width: 190px;
     margin-top: -30px;
     margin-bottom: 20px;
   }
   .room__about {
     width: 100%;
     min-height: auto;
+  }
+  .room__btn {
+    margin-top: 20px;
   }
   .modal__title {
     padding-left: 20px;
