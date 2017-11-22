@@ -1,5 +1,14 @@
 .about {
   padding-top: 40px;
+  
+  &--service {
+    padding-top: 50px;
+    padding-bottom: 85px;
+    
+    .about__wrap {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .about__subtitle {
@@ -29,4 +38,27 @@
   width: 50%;
   float: right;
   margin-left: 30px;
+}
+
+.about__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  padding-top: 25px;
+}
+
+.about__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  
+  &:last-child {
+    margin-right: 0;
+  }
 }
