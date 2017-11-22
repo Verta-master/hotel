@@ -405,16 +405,6 @@ textarea {
   margin: 0;
   padding: 0;
 }
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 body {
   font-family: "Circe", "Arial", sans-serif;
   font-size: 16px;
@@ -570,6 +560,17 @@ h3 {
 }
 .menu__item {
   margin-right: 35px;
+}
+.menu__btn {
+  display: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url(../img/icon-menu-ham.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .btn {
   width: 212px;
@@ -1331,14 +1332,6 @@ button.swiper-pagination-bullet {
   text-align: center;
   margin-bottom: 30px;
 }
-.about__wrap {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: start;
-      align-items: flex-start;
-}
 .about__text {
   margin-top: 0;
   margin-bottom: 30px;
@@ -1351,12 +1344,13 @@ button.swiper-pagination-bullet {
   color: #c69d5e;
   text-transform: uppercase;
 }
-.about__block {
-  width: 50%;
-  padding-right: 30px;
-}
 .about__title {
   margin-bottom: 50px;
+}
+.about__figure {
+  width: 50%;
+  float: right;
+  margin-left: 30px;
 }
 .benefits {
   padding-top: 55px;
@@ -1431,7 +1425,7 @@ button.swiper-pagination-bullet {
   z-index: 0;
 }
 .discount__wrap {
-  min-height: 228px;
+  height: 228px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -1558,10 +1552,18 @@ button.swiper-pagination-bullet {
   width: 370px;
   min-height: 544px;
   padding: 55px 40px 50px 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: start;
+      align-items: flex-start;
   box-sizing: border-box;
   color: #fff;
   position: relative;
-  z-index: 1;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.9);
 }
 .room__about p {
@@ -1616,6 +1618,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   min-height: 49px;
   border-radius: 0;
+  margin-top: auto;
 }
 .room__pagination {
   top: 0;
@@ -1628,11 +1631,347 @@ button.swiper-pagination-bullet {
   background-color: #fff;
   border: 1px solid #c69d5e;
   opacity: 1;
+  margin-right: 10px;
 }
 .room__pagination .swiper-pagination-bullet-active {
   background-color: #c69d5e;
 }
+.room__slide {
+  width: 100% !important;
+}
+.room__slider-wrap {
+  position: relative;
+}
 .logo {
   margin-left: 35px;
   margin-top: -5px;
+}
+.arcticmodal-overlay,
+.arcticmodal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+.arcticmodal-container {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-collapse: collapse;
+}
+*:first-child + html .arcticmodal-container {
+  height: 100%;
+}
+.arcticmodal-container_i {
+  height: 100%;
+  margin: 0 auto;
+}
+.arcticmodal-container_i2 {
+  padding: 24px;
+  margin: 0;
+  border: 0;
+  vertical-align: middle;
+}
+.arcticmodal-error {
+  padding: 20px;
+  border-radius: 10px;
+  background: #000;
+  color: #fff;
+}
+.arcticmodal-loading {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: #000 url(loading.gif) no-repeat 50% 50%;
+}
+.modal {
+  width: 1170px;
+  background-color: #c69d5e;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.modal__title {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  background-color: transparent;
+  background-image: url(../img/icon-close.png);
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (max-width: 1229px) {
+  .wrapper {
+    width: 100%;
+  }
+  .address {
+    max-width: 220px;
+  }
+  .header__top {
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  .weather,
+  .logo {
+    margin-left: 0;
+  }
+  .menu__btn {
+    display: block;
+  }
+  .menu {
+    padding-top: 28px;
+    padding-bottom: 32px;
+    position: relative;
+  }
+  .menu--closed .menu__list {
+    display: none;
+  }
+  .menu--opened .menu__btn {
+    background-image: url(../img/icon-menu-cross.svg);
+  }
+  .menu--opened .menu__list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: -30px;
+    padding-left: 30px;
+    width: 100vw;
+    z-index: 50;
+    background-color: #fff;
+  }
+  .booking {
+    padding: 30px;
+  }
+  .booking__btn {
+    width: 23%;
+  }
+  .booking__date-wrap {
+    width: 23%;
+  }
+  .booking__date-wrap::before {
+    left: 5px;
+  }
+  .booking__date {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .booking__select {
+    width: 23%;
+    padding-left: 15px;
+  }
+  .booking__text {
+    width: 36%;
+  }
+  .modal {
+    width: 100%;
+  }
+  .discount__title {
+    max-width: 650px;
+  }
+  .room__wrap {
+    display: block;
+  }
+  .room__block {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .room__slider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 1023px) {
+  .header__top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header__top .address {
+    -ms-flex-order: 2;
+        order: 2;
+  }
+  .logo {
+    width: 100%;
+    -ms-flex-order: 1;
+        order: 1;
+    text-align: center;
+  }
+  .weather {
+    -ms-flex-order: 3;
+        order: 3;
+  }
+  .footer__wrap,
+  .booking__line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .booking__text,
+  .booking__select,
+  .booking__date-wrap {
+    width: 49%;
+  }
+  .booking__btn {
+    width: 49%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .benefits__item {
+    padding-right: 0;
+  }
+  .discount__title {
+    font-size: 20px;
+  }
+  .footer__logo {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .promo__h1 span {
+    font-size: 48px;
+  }
+  .promo__comment {
+    font-size: 18px;
+  }
+  .benefits__list {
+    display: block;
+  }
+  .benefits__item {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .discount__wrap {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .discount__btn {
+    margin-top: 20px;
+  }
+  .modal__title {
+    font-size: 20px;
+  }
+  .benefits {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .room__wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .room__slider {
+    width: 100%;
+  }
+  .room__about {
+    padding: 25px 20px;
+    width: 50%;
+  }
+  .room__about p {
+    line-height: 1.2;
+  }
+  .room__h3 {
+    font-size: 14px;
+  }
+  .room__h3 span {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  .room__price {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+  .header__top {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .header__top .address {
+    margin-bottom: 10px;
+  }
+  .menu--opened .menu__list {
+    left: -10px;
+  }
+  .promo__h1 {
+    font-size: 14px;
+  }
+  .promo__h1 span {
+    font-size: 30px;
+  }
+  .booking {
+    padding: 20px;
+  }
+  .booking__date-wrap,
+  .booking__select,
+  .booking__text {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .booking__btn {
+    width: 100%;
+    margin-top: 0;
+  }
+  .about__title {
+    margin-bottom: 20px;
+  }
+  .about__figure {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  .footer__wrap {
+    -ms-flex-pack: center;
+        justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .social {
+    margin-top: 20px;
+  }
+  .room__img {
+    position: static;
+  }
+  .room__slide {
+    display: block;
+    padding-top: 30px;
+  }
+  .room__price {
+    width: 190px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+  }
+  .room__about {
+    width: 100%;
+    min-height: auto;
+  }
+  .modal__title {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
