@@ -1,0 +1,173 @@
+.room__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 85px;
+  padding-bottom: 105px;
+}
+
+.room__block {
+  width: 470px;
+}
+
+.room__title {
+  text-align: left;
+  margin: 0;
+}
+
+.room__subtitle {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-right: 70px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.room__text {
+  padding-right: 50px;
+  margin-bottom: 20px;
+}
+
+.room__link {
+  display: block;
+  margin-top: 55px;
+  position: relative;
+  font-weight: normal;
+  color: @yellow;
+  text-transform: uppercase;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 180px;
+    width: 16px;
+    height: 8px;
+    background-image: url(../img/icon-arrow-right.png);
+    background-repeat: no-repeat;
+  }
+  
+  &:hover,
+  &:active {
+    span {
+      border-bottom: 1px solid @yellow;
+    }
+  }
+}
+
+.room__slider {
+  width: 670px;
+}
+
+.room__slide {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.room__img {
+  position: absolute;
+  left: 0;
+  top: 75px;
+  width: 100%;
+  height: 390px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  
+  img {
+    max-width: none;
+  }
+}
+
+.room__about {
+  width: 370px;
+  min-height: 544px;
+  padding: 55px 40px 50px 30px;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  
+  p {
+    line-height: 1.6;
+  }
+}
+
+.room__price {
+  margin: 0;
+  margin-left: 37px;
+  margin-bottom: 35px;
+  padding: 20px;
+  min-height: 62px;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 18px;
+  font-weight: normal;
+  background-color: @yellow;
+  
+  span {
+    font-size: 24px;
+  }
+}
+
+.room__h3 {
+  font-family: "Circe", "Arial", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 25px;
+  
+  span {
+    display: block;
+    font-family: "Georgia", "Arial", sans-serif;
+    font-weight: bold;
+    color: @yellow;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 15px;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 96px;
+    height: 2px;
+    background-color: #fff;
+  }
+}
+
+.room__btn {
+  width: 100%;
+  min-height: 49px;
+  border-radius: 0;
+}
+
+.room__pagination {
+  top: 0;
+  bottom: auto;
+  text-align: left;
+  
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 1px solid @yellow;
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: @yellow;
+  }
+}
